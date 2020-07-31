@@ -1,8 +1,27 @@
 using System;
 
-class Sudoku
+class Sudoku_solver
 {
-    public static bool Is_Safe(int[,] board, int row, int column, int number)
+    public int[,] board = new int[9, 9];
+
+    public Sudoku_solver(int[,] board)
+    {
+        if(Solve(board))
+        {
+            this.board = board;
+        }
+        else
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    this.board[i, j] = 0;
+                }
+            }
+        }
+    }
+    private static bool Is_Safe(int[,] board, int row, int column, int number)
     {
         //Checks if the number is already present on the board, if it is -> returns false
 
@@ -35,13 +54,15 @@ class Sudoku
         return true;
     }
 
-    public static bool Sudoku_solver(int[,] board)
+    private static bool Solve(int[,] board)
     {
         int row = -1;
         int column = -1;    //we start "under" board
 
         bool Done = true;
 
+
+        //Here we go trough the board and look for empty cells
         for(int i = 0; i < 9; i++)
         {
             for(int j = 0; j < 9; j++)
@@ -50,7 +71,6 @@ class Sudoku
                 {
                     row = i;
                     column = j;
-
                     Done = false; //We aint done, there are still empty cells
                     break;
                 }
@@ -60,12 +80,15 @@ class Sudoku
 
         if (Done) return true; //if we're done then we got sudoku board filled and we can return true
 
+
+        //Here we're looking for a number that fits in the cell we picked
         for (int x = 1; x <= 9; x++)
         {
             if (Is_Safe(board, row, column, x))
             {
                 board[row, column] = x;     //we find a number that is safe to put in this row and column
-                if (Sudoku_solver(board)) return true;
+
+                if (Solve(board)) return true;
                 else
                 {
                     board[row, column] = 0; //if this number cant give us the proper solution we replace it
@@ -77,9 +100,9 @@ class Sudoku
 
     }
 
-    public static void printBoard(int[,] board)
+    private static void printBoard(int[,] board)
     {
-        for(int i = 0; i < 9; i++)
+        for (int i = 0; i < 9; i++)
         {
             for(int j = 0; j < 9; j++)
             {
@@ -88,27 +111,5 @@ class Sudoku
             Console.Write("\n");
         }
     }
-
-    public static void Main(String[] args) 
-    { 
-  
-        int[,] board = new int[9, 9] { 
-            { 3, 0, 6, 5, 0, 8, 4, 0, 0 }, 
-            { 5, 2, 0, 0, 0, 0, 0, 0, 0 }, 
-            { 0, 8, 7, 0, 0, 0, 0, 3, 1 }, 
-            { 0, 0, 3, 0, 1, 0, 0, 8, 0 }, 
-            { 9, 0, 0, 8, 6, 3, 0, 0, 5 }, 
-            { 0, 5, 0, 0, 9, 0, 6, 0, 0 }, 
-            { 1, 3, 0, 0, 0, 0, 2, 5, 0 }, 
-            { 0, 0, 0, 0, 0, 0, 0, 7, 4 }, 
-            { 0, 0, 5, 2, 0, 6, 3, 0, 0 } 
-        }; 
-  
-        if (Sudoku_solver(board)) { 
-            printBoard(board);
-        } 
-        else { 
-            Console.WriteLine("No solution");
-        } 
-    } 
+ 
 };

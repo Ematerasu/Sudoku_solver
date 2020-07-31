@@ -1,4 +1,5 @@
 # Sudoku_solver
-Simple sudoku solver for C#. Solves 9x9 sudokus using backtracking.
+Sudoku solver for C#. Solves 9x9 sudokus using backtracking.
+Simple gui was made in windows forms.
 
-Compile with csc Sudoku_solver.cs
+

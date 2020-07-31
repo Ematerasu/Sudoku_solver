@@ -1,0 +1,10 @@
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\bin\Debug\Sudoku_solver_gui.exe.config
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\bin\Debug\Sudoku_solver_gui.exe
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\bin\Debug\Sudoku_solver_gui.pdb
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\obj\Debug\Sudoku_solver_gui.csprojAssemblyReference.cache
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\obj\Debug\Sudoku_solver_gui.Properties.Resources.resources
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\obj\Debug\Sudoku_solver_gui.csproj.GenerateResource.cache
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\obj\Debug\Sudoku_solver_gui.csproj.CoreCompileInputs.cache
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\obj\Debug\Sudoku_solver_gui.exe
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\obj\Debug\Sudoku_solver_gui.pdb
+C:\Users\domin\Desktop\Coding\Sudoku_solver\Sudoku_solver_gui\obj\Debug\Sudoku_solver_gui.Sudoku_solver_window.resources
